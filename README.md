@@ -2,5 +2,4 @@
 Pet project made to study Django framework
 
 Nice course to get acquainted with Django framework - https://proproprogs.ru/django
-
-Video guide - https://youtube.com/playlist?list=PLA0M1Bcd0w8xO_39zZll2u1lz_Q-Mwn1F
+<br>Video guide - https://youtube.com/playlist?list=PLA0M1Bcd0w8xO_39zZll2u1lz_Q-Mwn1F
