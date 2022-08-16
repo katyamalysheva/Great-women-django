@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar', 
     'women.apps.WomenConfig', 
 ]
 
@@ -49,6 +50,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'coolsite.urls'
@@ -128,28 +131,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = 'home'
 
-'''LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': True,
-    'formatters': {
-        'simple': {
-            'format': '[%(levelname)s:%(name)s:%(lineno)d] %(message)s'
-        },
-    },
-    'handlers': {
-        # ...
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple',
-        },
-    },
-    'loggers': {
-        # ...
-        'django.db.backends': {
-            'handlers': ['console'],
-            'level': 'DEBUG',  # <----<<<
-            'propagate': False,
-        }
-    }
-}'''
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
