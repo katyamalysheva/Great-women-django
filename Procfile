@@ -1,1 +1,1 @@
-web: gunicorn coolsite.wsgi
+web: gunicorn coolsite.wsgi --log-file -
