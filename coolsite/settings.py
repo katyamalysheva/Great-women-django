@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 from django.db.models import Q
+import django_heroku
+import dj_database_url
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'pdk8bcv@oy$o4asp2100ymrv(0y$&qy5#oh-i($2s=j4fa4uvp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
@@ -90,9 +93,6 @@ DATABASES = {
     }
 }
 # Update database configuration with $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
 
 '''DATABASES = {
     'default': {
@@ -151,3 +151,4 @@ INTERNAL_IPS = [
     "127.0.0.1",
     # ...
 ]
+django_heroku.settings(locals())
