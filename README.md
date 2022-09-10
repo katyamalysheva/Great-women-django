@@ -6,4 +6,4 @@ Nice course to get acquainted with Django framework - https://proproprogs.ru/dja
 
 
 coolsite/shell.py - file to remind common ORM queries.
-deployed on heroku - https://gw-linux.herokuapp.com/about/
+<br> deployed on heroku - https://gw-linux.herokuapp.com/about/
